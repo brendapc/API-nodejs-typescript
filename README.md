@@ -1,3 +1,4 @@
 # API-nodejs-typescript
 testable nodejs typescript api 
-jest, axios
+<br>
+jest, axios, supertest, eslint, prettier
