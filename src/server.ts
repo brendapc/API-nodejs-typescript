@@ -21,13 +21,14 @@ export class SetupServer extends Server {
     const forecastController = new ForeclastController();
     this.addControllers([forecastController]);
   }
+  public getApp(): Application {
+    return this.app;
+  }
   private async databaseSetup(): Promise<void>{
     await database.connect();
   }
   public async close(): Promise<void>{
     await database.close();
   }
-  public getApp(): Application {
-    return this.app;
-  }
+  
 }
