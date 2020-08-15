@@ -1,6 +1,7 @@
 import {StormGlass} from '@src/clients/stormGlass'
 import stormGlassNormilizedResponseFixture from '@test/fixtures/stormGlass_normalized_response_3_hours_fixture.json'
-import {Forecast, Beach, BeachPosition, BeachForecast, ForecastProcessingInternalError } from '../forecast'
+import {Forecast, ForecastProcessingInternalError } from '../forecast'
+import { Beach, BeachPosition } from '@src/models/Beach'
 
 jest.mock('@src/clients/stormGlass')
 
@@ -15,7 +16,7 @@ describe('Forecast Service', ()=>{
                 lng: 151.289824,
                 name: 'Manly',
                 position: BeachPosition.E,
-                user: 'some-id',
+              
             },
         ];
         const expectedResponse = [
@@ -96,7 +97,7 @@ describe('Forecast Service', ()=>{
                 lng: 151.289824,
                 name: 'Manly',
                 position: BeachPosition.E,
-                user: 'some-id',
+            
             },    
         ]
         mockedStormGlassService.fetchPoints.mockRejectedValue('error fetching data')
