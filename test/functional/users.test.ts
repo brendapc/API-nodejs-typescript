@@ -1,11 +1,12 @@
 import { User } from "@src/models/user";
+import AuthService from '@src/services/auth'
 
 describe('users functional tests',()=>{
     beforeEach(async () => {
         await User.deleteMany({});
     });
     describe('when creating a new user', ()=>{
-        it('should successfully create a new user', async()=>{
+        it('should successfully create a new user with encrypted password', async()=>{
             const newUser = {
                 name: 'John Doe',
                 email: 'john@email.com',
@@ -14,7 +15,8 @@ describe('users functional tests',()=>{
 
             const response = await global.testRequest.post('/users').send(newUser)
             expect(response.status).toBe(201);
-            expect(response.body).toEqual(expect.objectContaining(newUser));
+            await expect(AuthService.comparePasswords(newUser.password, response.body.password)).resolves.toBeTruthy();
+            expect(response.body).toEqual(expect.objectContaining({...newUser, ...{password: expect.any(String)}})); 
         });
         it('Should return 422 when there is a validation error', async () => {
             const newUser = {
