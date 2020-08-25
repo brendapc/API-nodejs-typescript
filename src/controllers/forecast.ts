@@ -1,7 +1,7 @@
 import { Controller, Get, ClassMiddleware } from '@overnightjs/core';
 import { Request, Response } from 'express';
 import { Forecast } from '@src/services/forecast';
-import { Beach } from '@src/models/Beach';
+import { Beach } from '@src/models/beach';
 import { authMiddleware } from '@src/middlewares/auth';
 
 
