@@ -1,4 +1,4 @@
-import { Beach } from "@src/models/Beach";
+import { Beach } from "@src/models/beach";
 import { User } from "@src/models/user";
 import AuthService from "@src/services/auth";
 
