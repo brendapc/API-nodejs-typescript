@@ -7,7 +7,7 @@ export enum BeachPosition {
     N = 'N',
 }
   
-  export interface Beach {
+export interface Beach {
     _id?: string;
     name: string;
     position: BeachPosition;
