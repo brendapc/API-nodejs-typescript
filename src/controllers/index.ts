@@ -19,7 +19,7 @@ export abstract class  BaseController {
         const duplicatedKindErrors = Object.values(error.errors).filter((err)=> err.kind === CUSTOM_VALIDATION.DUPLICATED);
             if(duplicatedKindErrors.length){
                 return ({code: 409, error: error.message});
-            }return ({code: 422, error: error.message})    
+            }return ({code: 400, error: error.message})    
     }
 
     protected sendErrorResponse(res: Response, apiError: APIError): Response{
