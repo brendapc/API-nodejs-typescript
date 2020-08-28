@@ -13,6 +13,7 @@ import swaggerUi from 'swagger-ui-express';
 import apiSchema from './api.schema.json';
 import { OpenApiValidator } from 'express-openapi-validator';
 import { OpenAPIV3 } from 'express-openapi-validator/dist/framework/types';
+import { apiErrorValidator } from './middlewares/api-error-validator';
 
 export class SetupServer extends Server {
     constructor(private port = 3000) {
@@ -23,6 +24,7 @@ export class SetupServer extends Server {
         await this.docsSetup();
         this.setupControllers();
         await this.databaseSetup();
+        this.setupErrorHandlers();
     }
   private setupExpress(): void {
       this.app.use(bodyParser.json());
@@ -32,6 +34,10 @@ export class SetupServer extends Server {
       this.app.use(cors({
           origin: '*'
       }));
+  }
+
+  private setupErrorHandlers():void {
+      this.app.use(apiErrorValidator)
   }
   private setupControllers(): void {
       const forecastController = new ForeclastController();
