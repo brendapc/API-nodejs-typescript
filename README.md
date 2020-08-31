@@ -10,6 +10,6 @@ Pino, expressPino
 Login:
 bcrypt, json web token, cors, lodash
 <hr>
-Docs w/ OpenAPI
--swagger-ui-express 
--openapi-validator
+Docs w/ OpenAPI:
+- swagger-ui-express 
+- openapi-validator
