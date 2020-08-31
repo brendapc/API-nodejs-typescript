@@ -1,7 +1,15 @@
 # API-nodejs-typescript
-testable nodejs typescript api 
+<h1>testable nodejs typescript api </h1>
 <br>
-jest, axios, supertest, eslint, prettier, nock, bcrypt, json web token, Pino, expressPino, cors, lodash
-
-documentação com OpenAPI
--swagger-ui-express e openapi-validator
+Tests with:
+jest, axios, supertest, eslint, prettier, nock, 
+<hr>
+Logs:
+Pino, expressPino
+<hr>
+Login:
+bcrypt, json web token, cors, lodash
+<hr>
+Docs w/ OpenAPI
+-swagger-ui-express 
+-openapi-validator
