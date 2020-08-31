@@ -2,7 +2,7 @@
 <h1>testable nodejs typescript api </h1>
 <br>
 Tests with:
-jest, axios, supertest, eslint, prettier, nock, 
+jest, supertest, eslint, nock
 <hr>
 Logs:
 Pino, expressPino
@@ -13,3 +13,6 @@ bcrypt, json web token, cors, lodash
 Docs w/ OpenAPI:
 swagger-ui-express 
  and openapi-validator
+<hr>
+Other Technologies:
+axios, prettier
