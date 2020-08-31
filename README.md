@@ -11,5 +11,5 @@ Login:
 bcrypt, json web token, cors, lodash
 <hr>
 Docs w/ OpenAPI:
-- swagger-ui-express 
-- openapi-validator
+swagger-ui-express 
+ and openapi-validator
