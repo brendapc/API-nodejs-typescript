@@ -16,3 +16,17 @@ swagger-ui-express
 <hr>
 Other Technologies:
 axios, prettier
+ 
+# para rodar use: 
+``
+yarn start
+``
+## há scripts diferentes para os testes, podendo testa casa um com:
+``
+yarn test:unit
+``
+## ou testar todos juntos com:
+``
+yarn test
+``
+## lembrando que esta é (por enquanto) um aplicação backend only
