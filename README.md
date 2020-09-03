@@ -2,18 +2,13 @@
 <h1>testable nodejs typescript api </h1>
 <br>
 Tests with:
-jest, supertest, eslint, nock
-<hr>
+jest, supertest, eslint, nock<Br>
 Logs:
-Pino, expressPino
-<hr>
+Pino, expressPino <Br>
 Login:
-bcrypt, json web token, cors, lodash
-<hr>
+bcrypt, json web token, cors, lodash<Br>
 Docs w/ OpenAPI:
-swagger-ui-express 
- and openapi-validator
-<hr>
+swagger-ui-express and openapi-validator<Br>
 Other Technologies:
 axios, prettier
  
@@ -29,4 +24,4 @@ yarn test:unit
 ``
 yarn test
 ``
-## lembrando que esta é (por enquanto) um aplicação backend only
+## lembrando que esta é (por enquanto) uma aplicação backend only
