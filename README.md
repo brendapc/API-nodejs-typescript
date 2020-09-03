@@ -16,7 +16,7 @@ axios, prettier
 ``
 yarn start
 ``
-## há scripts diferentes para os testes, podendo testa casa um com:
+## há scripts diferentes para os testes, podendo testar cada um com:
 ``
 yarn test:unit
 ``
